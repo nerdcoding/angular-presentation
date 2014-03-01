@@ -1,0 +1,8 @@
+# gradle specific
+build/
+.gradle/
+out/
+
+# IDEA specific
+*.iml
+.idea/

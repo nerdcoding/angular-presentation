@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <title>AngularJS grocery list</title>
+</head>
+<body>
+
+<form name="groceryForm" class="form-horizontal container">
+    <h3>grocery list</h3>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Remove Grocery</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="span4">noodles</td>
+            <td class="span2">3</td>
+            <td class="span2">4.99</td>
+            <td class="span4">
+                <button type="button" class="btn"><i class="icon-minus-sign"></i> Remove</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th class="span4">Total:</th>
+            <th class="span2"></th>
+            <th class="span2">117.99</th>
+            <th class="span4"></th>
+        </tr>
+        </tfoot>
+    </table>
+
+    <div class="control-group">
+        <label class="control-label" for="name">Name:</label>
+        <div class="controls">
+            <input type="text" id="name" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="quantity">Quantity:</label>
+        <div class="controls">
+            <input type="text" class="input-mini" id="quantity" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="price">Price:</label>
+        <div class="controls">
+            <input type="text" class="input-mini" id="price"/>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="button" class="btn btn-primary"><i class="icon-plus-sign"></i> Add</button>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+
+    <title>AngularJS grocery list</title>
+
+    <script type="text/javascript" src="../lib/angular.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+
+</head>
+<body ng-app>
+
+<form name="groceryForm" ng-submit="addGrocery()" class="form-horizontal container" ng-controller="groceryListCtrl">
+    <h3>grocery list</h3>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Remove Grocery</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="grocery in groceries">
+        <tr>
+            <td class="span4">{{grocery.name}}</td>
+            <td class="span2" ng-bind="grocery.quantity"></td>
+            <td class="span2">{{grocery.price | currency}}</td>
+            <td class="span4">
+                <button type="button" class="btn" ng-click="removeGrocery($index)"><i class="icon-minus-sign"></i> Remove</button>
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <th class="span4">Total:</th>
+            <th class="span2"></th>
+            <th class="span2">{{total() | currency}}</th>
+            <th class="span4"></th>
+        </tr>
+        </tfoot>
+    </table>
+
+    <div class="control-group">
+        <label class="control-label" for="name">Name:</label>
+        <div class="controls">
+            <input type="text" id="name" ng-model="grocery.name"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="quantity">Quantity:</label>
+        <div class="controls">
+            <input type="text" class="input-mini" id="quantity" ng-model="grocery.quantity"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="price">Price:</label>
+        <div class="controls">
+            <input type="text" class="input-mini" id="price" ng-model="grocery.price"/>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="button" class="btn btn-primary" ng-click="addGrocery()"><i class="icon-plus-sign"></i> Add</button>
+    </div>
+</form>
+</body>
+</html>
