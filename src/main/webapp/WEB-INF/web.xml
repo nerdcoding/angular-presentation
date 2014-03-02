@@ -5,4 +5,36 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
            version="3.0">
 
+    <!-- start spring context during webapp deployment -->
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:META-INF/applicationContext.xml</param-value>
+    </context-param>
+
+    <!-- Jersey servlet for REST requests -->
+    <servlet>
+        <servlet-name>MyRestApplication</servlet-name>
+        <servlet-class>
+            org.glassfish.jersey.servlet.ServletContainer
+        </servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>org.nerdcoding.example.angular.presentation.web.MyRestApplication</param-value>
+        </init-param>
+        <init-param>
+            <param-name>co.sun.jersey.config.property.packages</param-name>
+            <param-value>com.fasterxml.jackson.jaxrs.json</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyRestApplication</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+
 </web-app>
