@@ -22,8 +22,8 @@ function groceryListCtrl($scope) {
 
     $scope.total = function() {
         var total = 0;
-        for (var i=0; i < $scope.groceries.length; i++) {
-            total = total + ($scope.groceries[i].quantity * $scope.groceries[i].price);
+        for (var i=0; i < $scope.filteredGroceries.length; i++) {
+            total = total + ($scope.filteredGroceries[i].quantity * $scope.filteredGroceries[i].price);
         }
 
         return total;

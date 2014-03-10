@@ -19,6 +19,8 @@
 <form name="groceryForm" ng-submit="addGrocery()" class="form-horizontal container" ng-controller="groceryListCtrl">
     <h3>grocery list</h3>
 
+    <input ng-model="search">
+
     <table class="table table-hover">
         <thead>
         <tr>
@@ -28,7 +30,7 @@
             <th>Remove Grocery</th>
         </tr>
         </thead>
-        <tbody ng-repeat="grocery in groceries">
+        <tbody ng-repeat="grocery in (filteredGroceries = (groceries | filter:search))">
         <tr>
             <td class="span4">{{grocery.name}}</td>
             <td class="span2" ng-bind="grocery.quantity"></td>
