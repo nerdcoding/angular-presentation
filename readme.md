@@ -2,6 +2,7 @@
 
 Simple Spring application with AngularJS web frontend. The application uses:
 
+* An embedded H2 database which is initialized during deployment.
 * JPA2 with Hibernate as persistence layer.
 * Spring Data for domain access.
 * Spring for dependency injection and transaction handling.
@@ -29,4 +30,6 @@ This application was tested on the Apache Tomcat 7.0.50. Therefor you need to do
 
 ### Use Application
 
-Open a web browser und use the application with the url `http://127.0.0.1:8080/angular/app/example.html`.
+Open a web browser and use the application with the url `http://127.0.0.1:8080/angular/app/example.html`.
+
+Anymore the REST service could be invoked with a HTTP GET request on the URL `http://127.0.0.1:8080/angular/rest/grocery`. 
