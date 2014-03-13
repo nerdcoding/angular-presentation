@@ -9,8 +9,6 @@ Simple Spring application with AngularJS web frontend. The application uses:
 * Jersey as JAX-RS implementation for REST services.
 * AngularJS as browser based javascript web framework.
 
-The application uses a embedded H2 database which is initialized during deployment. Anymore the REST service could be
-invoked by the URL `http://127.0.0.1:8080/angular/rest/grocery`
 
 ### Build
 
