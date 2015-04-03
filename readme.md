@@ -31,3 +31,4 @@ This application was tested on the Apache Tomcat 7.0.50. Therefor you need to do
 Open a web browser and use the application with the url `http://127.0.0.1:8080/angular/app/example.html`.
 
 Anymore the REST service could be invoked with a HTTP GET request on the URL `http://127.0.0.1:8080/angular/rest/grocery`. 
+
