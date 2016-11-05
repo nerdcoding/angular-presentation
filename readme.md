@@ -32,3 +32,7 @@ Open a web browser and use the application with the url `http://127.0.0.1:8080/a
 
 Anymore the REST service could be invoked with a HTTP GET request on the URL `http://127.0.0.1:8080/angular/rest/grocery`. 
 
+### Licensing
+The repository is licensed under the GNU Lesser General Public License. See
+[LICENSE](https://github.com/nerdcoding/angular-presentation/blob/master/LICENSE) for the full
+license text.
